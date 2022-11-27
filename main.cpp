@@ -11,7 +11,7 @@ int mistakes = 0, points = 0, total_mistakes = 0;
 
 string check(char user_guess, string password, string word_to_guess);
 void show_the_hangman(int mistakes);
-int check_if_done(string word, string coded_word);
+bool check_if_done(string word, string coded_word);
 
 /* ------------------------------------------------------------------ */
 
@@ -64,7 +64,7 @@ int main()
 
                 cout << "Your word to guess: " << coded_word << endl;
 
-                if (check_if_done(word, coded_word) == 1)
+                if (check_if_done(word, coded_word))
                 {
                         if (level == 10)
                         {
@@ -206,7 +206,7 @@ string check(char user_guess, string password, string word_to_guess) {
     return password;
 }
 
-int check_if_done(string word, string coded_word)
+bool check_if_done(string word, string coded_word)
 {
     int x = 0;
     int length = word.length();
@@ -216,11 +216,10 @@ int check_if_done(string word, string coded_word)
             x++;
     }
 
-    if (x == length)
-        x = 1;
-    else x = 0;
+    if (x == length) return true;
+    else return false;
 
-    return x;
+    return true;
 }
 
 void show_the_hangman(int mistakes) {
