@@ -31,7 +31,7 @@ int main()
         cout << "1. Play" << endl;
         cout << "2. Exit" << endl;
         cout << endl;
-            
+
         cout << "Choose option: "; cin >> option;
 
         if (option == 1)
@@ -138,9 +138,7 @@ int main()
             }
         }
 
-        else if (option == 2)
-            exit(0);
-        }
+        else if (option == 2) exit(0);
         else  {
             cout << "Error!!! " << endl;
             Sleep(500);
@@ -149,7 +147,6 @@ int main()
         }
     }
 }
-
 
 string check(char user_guess, string password, string word_to_guess) {
 
@@ -303,6 +300,3 @@ void show_the_hangman(int mistakes) {
         cout << "  O00O            " << endl;
     }
 }
-
-
-
