@@ -30,7 +30,8 @@ int main()
         cout << "         WELCOME TO THE HANGMAN GAME" << endl << endl;
         cout << "1. Play" << endl;
         cout << "2. Exit" << endl;
-        cout << "3. How the game works? // Principles of operation" << endl << endl;
+        cout << endl;
+            
         cout << "Choose option: "; cin >> option;
 
         if (option == 1)
@@ -139,35 +140,8 @@ int main()
 
         else if (option == 2)
             exit(0);
-
-        else if (option == 3)   {
-            int side_option;
-            system("cls");
-            SetConsoleTextAttribute(h0ut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-            cout << "The game was made by Krystian Stanik, student of " << endl;
-            cout << "Technical School in Zespol Szkol Elektronicznych im. Bohaterow Westerplatte w Radomiu in Poland" << endl << endl;
-            cout << "How the game works? // (What you can do and consequences of that)" << endl;
-            cout << "- You can guess more than 1 letter at the same time but be aware that if the word is guessed and" << endl;
-            cout << "  there are still some letters that you entered, the game may not work how you would like to work" << endl;
-            cout << "- If you enter lowercase letter the answer will not be correct" << endl;
-            cout << "- If you enter a number instead of a letter the answer will not be correct " << endl;
-            cout << "  (obvious but still I'm gonna write this here)" << endl << endl;
-            cout << "Return to the menu - (1 - yes, 0 - no (exit the program) : "; cin >> side_option;
-            if (side_option == 1)
-            {
-                system("cls");
-                continue;
-            }
-
-            else if (side_option == 0)
-                exit(0);
-            else
-            {
-                cout << "Huh so you're funny, then we will end the game" << endl;
-                exit(0);
-            }
         }
-        else    {
+        else  {
             cout << "Error!!! " << endl;
             Sleep(500);
             system("cls");
